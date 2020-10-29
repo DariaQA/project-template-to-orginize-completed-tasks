@@ -21,7 +21,7 @@ public class GuessingNumber {
             int b;
 
             do {
-                System.out.println("Guess the number from 0 to 10: ");
+                System.out.println("Guess the number from 0 to 20: ");
                 b = scanner.nextInt();
                 if(b != a){
                     System.out.println("Try again ");

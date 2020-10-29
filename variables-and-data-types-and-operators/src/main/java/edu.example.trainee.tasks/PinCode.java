@@ -8,22 +8,28 @@ public class PinCode {
      * Дополните программу, чтобы оьработать попытки ввода неправильного PIN кода.
      */
 
-        public static void main(String[] args) {
-            Scanner keyboard = new Scanner(System.in);
-            String pinCode = "Q2fg35ytW4";
 
-            System.out.println("Welcome to the most trusted bank!");
-            System.out.print("Enter your PIN code: ");
-            String entryCode = keyboard.nextLine();
-            entryCode.equals(pinCode) ;
+            public static void main(String[] args) {
+                Scanner keyboard = new Scanner(System.in);
+                int pinCode = 2354;
 
-            // ...
-            if (entryCode.equals("Q2fg35ytW4"))    {
-                System.out.println("Password is correct!" );
+                System.out.println("Welcome to the most trusted bank!");
+                System.out.print("Enter your PIN code: ");
+                int entryCode = keyboard.nextInt();
+
+                do {
+
+                    if(pinCode !=  entryCode){
+                        System.out.print("Sorry, try again: ");
+                        entryCode  = keyboard.nextInt();
+
+                    }else {
+                        System.out.println("Password is correct!");
+                    }
+                }
+                while (pinCode != entryCode);
             }
-            else {
-                System.out.println("Password is incorrect!");
             }
-        }
-    }
+
+
 
